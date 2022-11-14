@@ -5,8 +5,8 @@ namespace Consodle
 {
     public class selectWord
     {
-                string fileName = @"wordlist.txt";
-        private string selectedWord = string.Empty;
+        string fileName = @"wordlist.txt";
+        private string selectedWord;
         
 
         public selectWord ()
@@ -20,8 +20,11 @@ namespace Consodle
             Random rnd = new Random();
             int lineNum = rnd.Next(lineCount);
 
+            selectedWord = File.ReadLines(fileName).ElementAtOrDefault(lineNum - 1)!;
 
-            return selectedWord;
+            return selectedWord.ToUpper();
+            
+
 
         }
     }
