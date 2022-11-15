@@ -6,5 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+  <Copy SourceFiles="wordlist.txt" DestinationFolder="$(OutDir)" />
+</Target>
+<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+  <Copy SourceFiles="wordlist.txt" DestinationFolder="$(PublishDir)" />
+</Target>
 </Project>
