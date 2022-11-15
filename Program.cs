@@ -6,12 +6,19 @@ namespace Consodle
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
 
             selectWord selectedWord = new selectWord();
             var todayWord = selectedWord.getWord();
+            gameArray gameBoard = new gameArray();
+
 
             Console.WriteLine(todayWord);
+            gameBoard.printGameBoard();
+
+
         }
+
+
     }
 }
