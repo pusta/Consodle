@@ -7,9 +7,9 @@ namespace Consodle
     {
         string fileName = @"wordlist.txt";
         private string selectedWord;
-        
 
-        public selectWord ()
+
+        public selectWord()
         {
             selectedWord = string.Empty;
         }
@@ -23,7 +23,7 @@ namespace Consodle
             selectedWord = File.ReadLines(fileName).ElementAtOrDefault(lineNum - 1)!;
 
             return selectedWord.ToUpper();
-            
+
 
 
         }
