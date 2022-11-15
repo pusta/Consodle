@@ -14,7 +14,7 @@ namespace Consodle
             {
                 for (int j = 0; j <= uBound1; j++)
                 {
-                    gameBoard[i, j] = " ";
+                    gameBoard[i, j] = "_";
 
                 }
             }
