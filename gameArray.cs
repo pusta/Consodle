@@ -30,15 +30,17 @@ namespace Consodle
 
         }
 
-        public string[,] addGuess(int guessNum, string playerGuess)
+        public void addGuess(int guessNum, string playerGuess)
         {
-            for (int i = 0; i < playerGuess.Length; i++)
+            playerGuess = playerGuess.ToUpper();
+
+            for (int i = 0; i < 5; i++)
             {
                 gameBoard[guessNum, i] = playerGuess[i].ToString();
+
             }
 
 
-            return gameBoard;
         }
 
         public void printGameBoard()
