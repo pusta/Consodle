@@ -16,8 +16,9 @@ namespace Consodle
             gameArray gameBoard = new gameArray();
 
 
+
             Console.WriteLine(todayWord);
-            //gameBoard.printGameBoard();
+            gameBoard.printGameBoard();
             while (guessNum <= 5)
             {
 
@@ -32,6 +33,7 @@ namespace Consodle
 
 
                 gameBoard.addGuess(guessNum, playerGuess);
+                gameBoard.checkGuess(guessNum, todayWord);
                 gameBoard.printGameBoard();
                 guessNum++;
 
@@ -41,6 +43,8 @@ namespace Consodle
 
 
         }
+
+
 
 
     }

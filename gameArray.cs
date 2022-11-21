@@ -4,6 +4,8 @@ namespace Consodle
     {
 
         private string[,] gameBoard = new string[6, 5];
+        private string[,] scoreBoard = new string[6, 5];
+
         public gameArray()
         {
 
@@ -15,6 +17,7 @@ namespace Consodle
                 for (int j = 0; j <= uBound1; j++)
                 {
                     gameBoard[i, j] = "_";
+                    scoreBoard[i, j] = "_";
 
                 }
             }
@@ -26,6 +29,7 @@ namespace Consodle
         public void clearArray()
         {
             Array.Clear(gameBoard, 0, gameBoard.Length);
+            Array.Clear(scoreBoard, 0, scoreBoard.Length);
 
 
         }
@@ -42,6 +46,31 @@ namespace Consodle
 
 
         }
+
+        public void checkGuess(int guessNum, List<string> todayWord)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                if (gameBoard[guessNum, i] == todayWord[i])
+                {
+                    scoreBoard[guessNum, i] = "C";
+                }
+                else if (todayWord.Contains(gameBoard[guessNum, i]))
+                {
+                    scoreBoard[guessNum, i] = "*";
+
+                }
+
+                else
+                {
+                    scoreBoard[guessNum, i] = "I";
+                }
+
+            }
+
+
+        }
+
 
         public void printGameBoard()
         {
