@@ -81,7 +81,37 @@ namespace Consodle
             {
                 for (int j = 0; j <= uBound1; j++)
                 {
+                    switch (scoreBoard[i, j])
+                    {
+                        case "C":
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            break;
+                        case "*":
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            break;
+                        case "I":
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                    }
+
                     string res = gameBoard[i, j];
+                    Console.Write(res);
+                    Console.ResetColor();
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public void printScoreBoard()
+        {
+            int uBound0 = scoreBoard.GetUpperBound(0);
+            int uBound1 = scoreBoard.GetUpperBound(1);
+
+            for (int i = 0; i <= uBound0; i++)
+            {
+                for (int j = 0; j <= uBound1; j++)
+                {
+                    string res = scoreBoard[i, j];
                     Console.Write(res);
                 }
                 Console.WriteLine();
