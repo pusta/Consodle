@@ -17,7 +17,13 @@ namespace Consodle
 
 
 
-            Console.WriteLine(todayWord);
+            //This section is to print today's word as a test
+            for (int i = 0; i < todayWord.Count; i++)
+            {
+                Console.Write(todayWord[i]);
+            }
+            Console.WriteLine();
+            //End print of todays word.
             gameBoard.printGameBoard();
             while (guessNum <= 5)
             {
@@ -35,6 +41,7 @@ namespace Consodle
                 gameBoard.addGuess(guessNum, playerGuess);
                 gameBoard.checkGuess(guessNum, todayWord);
                 gameBoard.printGameBoard();
+                gameBoard.printScoreBoard();
                 guessNum++;
 
 
