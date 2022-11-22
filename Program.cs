@@ -34,8 +34,19 @@ namespace Consodle
 
                 while (playerGuess.Length != 5 || String.IsNullOrEmpty(playerGuess) || !File.ReadAllText(fileName).Contains(playerGuess))
                 {
-                    Console.Write("Invalid Guess, please try again:");
-                    playerGuess = Console.ReadLine()!;
+
+                    if (playerGuess.Length != 5 || String.IsNullOrEmpty(playerGuess))
+                    {
+
+                        Console.Write("Invalid Guess, please try again: ");
+                        playerGuess = Console.ReadLine()!;
+                    }
+                    else
+                    {
+                        Console.Write("Word not in word list, please try again: ");
+                        playerGuess = Console.ReadLine()!;
+                    }
+
                 }
 
 
