@@ -14,6 +14,7 @@ namespace Consodle
             selectWord selectedWord = new selectWord();
             var todayWord = selectedWord.getWord();
             gameArray gameBoard = new gameArray();
+            bool gameWinner = false;
 
 
 
@@ -25,7 +26,7 @@ namespace Consodle
             Console.WriteLine();
             //End print of todays word.
             gameBoard.printGameBoard();
-            while (guessNum <= 5)
+            while (guessNum <= 5 && !gameWinner)
             {
 
                 Console.Write("Please enter a guess: ");
@@ -41,11 +42,26 @@ namespace Consodle
                 gameBoard.addGuess(guessNum, playerGuess);
                 gameBoard.checkGuess(guessNum, todayWord);
                 gameBoard.printGameBoard();
+
+
                 gameBoard.printScoreBoard();
+                Console.WriteLine(gameBoard.checkForWin(guessNum).ToString());
+                gameWinner = gameBoard.checkForWin(guessNum);
                 guessNum++;
 
 
             }
+
+            if (gameWinner)
+            {
+                Console.WriteLine("Congrats, you win!");
+
+            }
+            else
+            {
+                Console.WriteLine("Sorry, you did not guess the word.  Better luck next time!");
+            }
+
 
 
 

@@ -71,6 +71,30 @@ namespace Consodle
 
         }
 
+        public bool checkForWin(int guessNum)
+        {
+            int numCorrect = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                if (scoreBoard[guessNum, i] == "C")
+                {
+                    numCorrect = numCorrect + 1;
+                }
+
+            }
+
+            if (numCorrect == 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+
 
         public void printGameBoard()
         {
