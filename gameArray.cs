@@ -7,6 +7,8 @@ namespace Consodle
         private string[,] scoreBoard = new string[6, 5];
         private List<string> todayWord;
 
+        Alphabet gameLetters = new Alphabet();
+
         selectWord selectedWord = new selectWord();
 
         public gameArray()
@@ -78,6 +80,7 @@ namespace Consodle
                 else
                 {
                     scoreBoard[guessNum, i] = "I";
+                    gameLetters.removeLetter(Char.Parse(gameBoard[guessNum, i]));
                 }
 
             }
@@ -137,7 +140,9 @@ namespace Consodle
                     Console.ResetColor();
                 }
                 Console.WriteLine();
+
             }
+            gameLetters.printAvailLetters();
         }
 
         public void printScoreBoard()
