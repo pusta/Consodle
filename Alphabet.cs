@@ -16,5 +16,23 @@ namespace Consodle
                 gameLetters.Add(c);
             }
         }
+
+        public void removeLetter(char letter)
+        {
+            gameLetters.Remove(letter);
+
+        }
+
+        public void printAvailLetters()
+        {
+            foreach (var letter in gameLetters)
+            {
+                Console.Write(letter + " ");
+                Console.WriteLine();
+            }
+        }
     }
+
+
+
 }
