@@ -25,11 +25,14 @@ namespace Consodle
 
         public void printAvailLetters()
         {
+            Console.WriteLine("Available Letters: ");
             foreach (var letter in gameLetters)
             {
+
                 Console.Write(letter + " ");
-                Console.WriteLine();
+
             }
+            Console.WriteLine();
         }
     }
 
