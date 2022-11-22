@@ -45,9 +45,11 @@ namespace Consodle
                 gameBoard.checkGuess(guessNum);
                 gameBoard.printGameBoard();
 
+                //Prints the scoreboard array, which keeps track of correct and incorrect guesses.  Debugging only.
+                //gameBoard.printScoreBoard();
 
-                gameBoard.printScoreBoard();
-                Console.WriteLine(gameBoard.checkForWin(guessNum).ToString());
+                //Prints the current status of the game.  True means player has won, false keeps going.  Debugging only 
+                //Console.WriteLine(gameBoard.checkForWin(guessNum).ToString());
                 gameWinner = gameBoard.checkForWin(guessNum);
                 guessNum++;
 
