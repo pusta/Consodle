@@ -11,20 +11,11 @@ namespace Consodle
             int guessNum = 0;
             string playerGuess;
             string fileName = @"wordlist.txt";
-            selectWord selectedWord = new selectWord();
-            var todayWord = selectedWord.getWord();
+
             gameArray gameBoard = new gameArray();
             bool gameWinner = false;
 
 
-
-            //This section is to print today's word as a test
-            for (int i = 0; i < todayWord.Count; i++)
-            {
-                Console.Write(todayWord[i]);
-            }
-            Console.WriteLine();
-            //End print of todays word.
             gameBoard.printGameBoard();
             while (guessNum <= 5 && !gameWinner)
             {
@@ -51,7 +42,7 @@ namespace Consodle
 
 
                 gameBoard.addGuess(guessNum, playerGuess);
-                gameBoard.checkGuess(guessNum, todayWord);
+                gameBoard.checkGuess(guessNum);
                 gameBoard.printGameBoard();
 
 

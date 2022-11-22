@@ -5,6 +5,9 @@ namespace Consodle
 
         private string[,] gameBoard = new string[6, 5];
         private string[,] scoreBoard = new string[6, 5];
+        private List<string> todayWord;
+
+        selectWord selectedWord = new selectWord();
 
         public gameArray()
         {
@@ -22,6 +25,17 @@ namespace Consodle
                 }
             }
 
+            todayWord = selectedWord.getWord();
+
+            /*
+                //This section is to print today's word as a test
+                for (int i = 0; i < todayWord.Count; i++)
+                {
+                     Console.Write(todayWord[i]);
+                }
+                Console.WriteLine();
+                //End print of todays word.
+            */
 
 
         }
@@ -47,7 +61,7 @@ namespace Consodle
 
         }
 
-        public void checkGuess(int guessNum, List<string> todayWord)
+        public void checkGuess(int guessNum)
         {
             for (int i = 0; i < 5; i++)
             {
