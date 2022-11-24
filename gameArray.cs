@@ -29,15 +29,7 @@ namespace Consodle
 
             todayWord = selectedWord.getWord();
 
-            /*
-                //This section is to print today's word as a test
-                for (int i = 0; i < todayWord.Count; i++)
-                {
-                     Console.Write(todayWord[i]);
-                }
-                Console.WriteLine();
-                //End print of todays word.
-            */
+
 
 
         }
@@ -159,6 +151,21 @@ namespace Consodle
                 }
                 Console.WriteLine();
             }
+        }
+
+        public void printTodayWord()
+        {
+
+
+            //This section is to print today's word as a test
+            for (int i = 0; i < todayWord.Count; i++)
+            {
+                Console.Write(todayWord[i]);
+            }
+            Console.WriteLine();
+            //End print of todays word.
+
+
         }
 
 

@@ -63,7 +63,10 @@ namespace Consodle
             }
             else
             {
-                Console.WriteLine("Sorry, you did not guess the word.  Better luck next time!");
+                Console.WriteLine("Sorry, you did not guess the word.  Today's word was: ");
+                gameBoard.printTodayWord();
+                Console.WriteLine("Better luck next time!");
+
             }
 
 
