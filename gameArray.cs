@@ -55,31 +55,6 @@ namespace Consodle
 
         }
 
-        /*public void checkGuess(int guessNum)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                //counts the number of times a letter occurs in the word.
-                var letterOccurance = todayWord.Count(x => x == gameBoard[guessNum, i]);
-
-                if (gameBoard[guessNum, i] == todayWord[i])
-                {
-                    scoreBoard[guessNum, i] = "C";
-
-                }
-                else if (todayWord.Contains(gameBoard[guessNum, i]))
-                {
-                    scoreBoard[guessNum, i] = "*";
-
-                }
-
-                else
-                {
-                    scoreBoard[guessNum, i] = "I";
-                    gameLetters.removeLetter(Char.Parse(gameBoard[guessNum, i]));
-                }
-
-            }*/
 
         public void checkGuess(int guessNum)
         {
